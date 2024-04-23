@@ -6,6 +6,15 @@ function combine(str1, str2, str3) {
    // combine("abc", "", "123") == "a1b2c3"
    // combine("abc", "12345", "") == "a1b2c345"
    // combine("abc", "12345", "67") == "a16b27c345"
+   let resultado = '';
+   let i = 0;
+   while (str1[i] || str2[i] || str3[i]) {
+      if (str1[i]) resultado += str1[i];
+      if (str2[i]) resultado += str2[i];
+      if (str3[i]) resultado += str3[i];
+      i++;
+   }
+   return resultado;
 }
 
 module.exports = combine;
